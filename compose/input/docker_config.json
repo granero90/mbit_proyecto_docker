@@ -1,0 +1,10 @@
+{
+    "api_telebot":"",
+    "telegram_groupId":,
+    "symbol":"btcusdt",
+    "rango1":20,
+    "rango2":30,
+    "rango3":40,
+    "series":15,
+    "time_window":720
+}

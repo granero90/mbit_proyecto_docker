@@ -1,0 +1,49 @@
+version: '3'
+services:
+  db:
+    image: mongo
+    command: ################################
+             ####### Incluir código #########
+             ################################
+    networks:
+          - api_network
+    restart: always
+
+  api_producer:
+    build:
+      context: ../docker_provider
+    environment:
+      ################################
+      ####### Incluir código #########
+      ################################
+    ports:
+      ################################
+      ####### Incluir código #########
+      ################################
+    depends_on: 
+      - db
+    volumes:
+      - './input/:/app/code/in'
+      - './output/:/app/code/out'
+    networks:
+          - api_network
+    restart: always
+
+  api_consumer:
+    build:
+      context: ../docker_consumer
+    volumes:
+      - './input/:/app/code/in'
+      - './output/:/app/code/out'
+    depends_on: 
+      ################################
+      ####### Incluir código #########
+      ################################
+    networks:
+          - api_network
+    restart: always
+
+networks:
+  ################################
+  ####### Incluir código #########
+  ################################
