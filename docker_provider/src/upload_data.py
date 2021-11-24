@@ -104,4 +104,6 @@ def main():
         df_global=df_global.drop_duplicates(["AggregateTradeId"],keep="first").sort_values("AggregateTradeId",ascending=False).reset_index(drop=True)
         df=deepcopy(df_global)
 
-        return get_stocastic(df)
+        ################################
+        ####### Incluir código #########
+        ################################
